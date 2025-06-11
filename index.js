@@ -91,6 +91,10 @@ const findMinCost = (order) => {
   return minCost;
 };
 
+app.get("/", (req, res) => {
+  res.send("Delivery Cost API is running 🚚");
+});
+
 app.post("/calculate-delivery-cost", (req, res) => {
   const order = req.body;
   const minCost = findMinCost(order);
